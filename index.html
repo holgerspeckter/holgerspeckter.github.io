@@ -14,7 +14,7 @@
     }
     .header {
       background: linear-gradient(90deg, #5383ec 0%, #71b7f7 100%);
-      padding: 42px 0 24px 0;
+      padding: 42px 0 48px 0;   /* More bottom padding */
       text-align: center;
       border-radius: 0 0 36px 36px;
       box-shadow: 0 6px 22px rgba(70, 120, 190, 0.07);
@@ -27,8 +27,9 @@
       border-radius: 50%;
       border: 4px solid #fff;
       box-shadow: 0 4px 16px rgba(20, 48, 97, 0.12);
-      margin-top: -75px;
       background: #eee;
+      margin-top: 28px;   /* Pushes image further down inside header */
+      margin-bottom: 10px;
     }
     .name {
       font-size: 2.5rem;
@@ -174,20 +175,19 @@
     @media (max-width: 700px) {
       .container { padding: 13px; }
       .bookshelf, .portfolio-grid { grid-template-columns: 1fr 1fr;}
-      .profile-pic { width: 85px; height: 85px; margin-top: -62px;}
+      .profile-pic { width: 85px; height: 85px; margin-top: 18px;}
     }
     @media (max-width: 480px) {
       .bookshelf, .portfolio-grid { grid-template-columns: 1fr;}
       .header { padding: 35px 0 20px 0;}
       .container { margin-top: -25px;}
-      .profile-pic { width: 70px; height: 70px; margin-top: -42px;}
+      .profile-pic { width: 70px; height: 70px; margin-top: 10px;}
       .name { font-size: 2rem;}
     }
   </style>
 </head>
 <body>
   <div class="header">
-    <!-- Replace with your actual photo, or use a nice avatar -->
     <img class="profile-pic" src="images/holger.png" alt="Holger Speckter">
     <div class="name">Holger Speckter</div>
     <div class="headline">Six Sigma Black Belt · AI & Data Science Expert · Author</div>
@@ -213,7 +213,23 @@
       <li><b>Business Intelligence:</b> Developed onboarding systems, automation tools, and market insights.</li>
     </ul>
     <div class="section-title">Portfolio</div>
+  <div class="section-title">Portfolio</div>
     <div class="portfolio-grid">
+      <!-- Python Portfolio Card -->
+      <div class="portfolio-card">
+        <img src="images/python-logo.png" alt="Python Portfolio">
+        <div class="portfolio-title">Python Portfolio</div>
+        <div class="portfolio-desc">Explore my collection of Python projects: data analysis, dashboards, AI, automation, and more.</div>
+        <a class="portfolio-link" href="https://holgerspeckter.github.io/python_projects/" target="_blank">View Python Projects</a>
+      </div>
+      <!-- R Portfolio Card -->
+      <div class="portfolio-card">
+        <img src="images/r-logo.png" alt="R Portfolio">
+        <div class="portfolio-title">R Portfolio</div>
+        <div class="portfolio-desc">Discover my R projects, including statistical analysis, visualization, and reporting tools.</div>
+        <a class="portfolio-link" href="https://holgerspeckter.github.io/R_projects/" target="_blank">View R Projects</a>
+      </div>
+      <!-- Your individual project cards below -->
       <div class="portfolio-card">
         <img src="images/portfolio-python-dashboard.png" alt="Python Data Dashboard">
         <div class="portfolio-title">Python Data Dashboard</div>
@@ -233,7 +249,7 @@
         <a class="portfolio-link" href="https://github.com/holgerspeckter/nlp-chatbot" target="_blank">View on GitHub</a>
       </div>
     </div>
-    <div class="section-title">Books</div>
+    <div class="section-title">My Books</div>
     <div class="bookshelf">
       <div class="book">
         <a href="https://www.amazon.com/dp/B0D83RHX6R" target="_blank">
@@ -266,9 +282,24 @@
     </div>
     <div class="section-title">Certifications & Awards</div>
     <ul>
-      <li>Lean Six Sigma Black Belt & Yellow Belt</li>
-      <li>IBM AI Engineering Professional Certificate</li>
-      <li>PayPal Spot Award, Game Changer Award</li>
+      <li>
+        <a href="URL_TO_YOUR_SIX_SIGMA_BLACK_BELT_CERTIFICATE" target="_blank">
+          Lean Six Sigma Black Belt
+        </a> &amp; 
+        <a href="URL_TO_YOUR_SIX_SIGMA_YELLOW_BELT_CERTIFICATE" target="_blank">
+          Yellow Belt
+        </a>
+      </li>
+      <li>
+        <a href="URL_TO_YOUR_IBM_AI_CERTIFICATE" target="_blank">
+          IBM AI Engineering Professional Certificate
+        </a>
+      </li>
+      <li>
+        <a href="URL_TO_YOUR_PAYPAL_AWARD_CERTIFICATE" target="_blank">
+          PayPal Spot Award, Game Changer Award
+        </a>
+      </li>
     </ul>
     <div class="section-title">Links & Contact</div>
     <div class="links">
