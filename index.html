@@ -7,161 +7,204 @@
   <style>
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
-      margin: 0;
-      background: #f7f7f9;
+      background: #f6f7fb;
       color: #23272f;
-      line-height: 1.6;
+      margin: 0;
+      line-height: 1.65;
     }
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 4px 24px rgba(40,40,60,0.07);
-      padding: 36px 28px 28px 28px;
+    .header {
+      background: linear-gradient(90deg, #5383ec 0%, #71b7f7 100%);
+      padding: 42px 0 24px 0;
+      text-align: center;
+      border-radius: 0 0 36px 36px;
+      box-shadow: 0 6px 22px rgba(70, 120, 190, 0.07);
+      position: relative;
     }
-    h1 {
-      margin-top: 0;
-      font-size: 2.5rem;
-      letter-spacing: -1px;
-      color: #0c2239;
-    }
-    .subtitle {
-      font-size: 1.2rem;
-      color: #63718a;
-      margin-bottom: 28px;
-    }
-    .section-title {
-      margin-top: 32px;
-      margin-bottom: 10px;
-      font-size: 1.25rem;
-      color: #3467b1;
-      border-bottom: 1.5px solid #e4e7ec;
-      padding-bottom: 4px;
-      letter-spacing: 0.5px;
-    }
-    .flexbox {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-    }
-    .profile-info {
-      flex: 2;
-      min-width: 250px;
-    }
-    .profile-photo {
-      flex: 1;
-      min-width: 130px;
-      align-self: flex-start;
-      margin-left: 32px;
-    }
-    .profile-photo img {
+    .profile-pic {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
       border-radius: 50%;
-      width: 120px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border: 4px solid #fff;
+      box-shadow: 0 4px 16px rgba(20, 48, 97, 0.12);
+      margin-top: -75px;
+      background: #eee;
+    }
+    .name {
+      font-size: 2.5rem;
+      color: #fff;
+      margin: 16px 0 0 0;
+      letter-spacing: -1px;
+    }
+    .headline {
+      color: #e5f2ff;
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 16px;
+      margin-top: 6px;
     }
     .badges {
-      margin-top: 16px;
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
+      justify-content: center;
+      margin-bottom: 14px;
     }
     .badge {
-      background: #e9efff;
-      color: #285eb6;
+      background: #fff;
+      color: #3b65ad;
       border-radius: 16px;
-      padding: 3px 15px;
-      font-size: 0.95em;
+      padding: 4px 16px;
+      font-size: 0.98em;
       font-weight: 500;
-      border: 1px solid #d6e3f8;
+      border: 1px solid #e2eaff;
+      margin-top: 7px;
+    }
+    .container {
+      max-width: 950px;
+      margin: -36px auto 40px auto;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 28px rgba(80,90,120,0.08);
+      padding: 38px 28px 30px 28px;
+    }
+    .about {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.09rem;
+      color: #37516b;
+    }
+    .section-title {
+      margin-top: 38px;
+      margin-bottom: 13px;
+      font-size: 1.22rem;
+      color: #4e7bd2;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      border-left: 3px solid #7bb7f7;
+      padding-left: 10px;
+      background: linear-gradient(90deg, #f6f7fb 80%, #eaf3fc 100%);
+      border-radius: 8px;
+      display: inline-block;
     }
     ul {
       margin: 0 0 0 16px;
       padding: 0;
+      font-size: 1.01rem;
     }
-    .bookshelf {
+    .bookshelf, .portfolio-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 18px;
-      margin-top: 12px;
-    }
-    .book {
-      background: #f6f8fa;
-      border-radius: 11px;
-      padding: 12px;
-      box-shadow: 0 2px 7px rgba(80,90,120,0.05);
-      text-align: center;
-    }
-    .book img {
-      width: 100px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 7px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-      margin-bottom: 7px;
-    }
-    .book-title {
-      font-size: 1.05em;
-      font-weight: 500;
+      margin-top: 16px;
       margin-bottom: 2px;
-      color: #285eb6;
     }
-    .book-desc {
-      font-size: 0.92em;
-      color: #46586d;
-      min-height: 35px;
+    .book, .portfolio-card {
+      background: #f5faff;
+      border-radius: 13px;
+      padding: 13px 10px 14px 10px;
+      box-shadow: 0 2px 10px rgba(70,110,170,0.04);
+      text-align: center;
+      transition: transform 0.12s;
+    }
+    .book:hover, .portfolio-card:hover {
+      transform: translateY(-4px) scale(1.018);
+      box-shadow: 0 4px 16px rgba(80,130,220,0.10);
+    }
+    .book img, .portfolio-card img {
+      width: 95px;
+      height: 138px;
+      object-fit: cover;
+      border-radius: 8px;
+      background: #e5eaf1;
+      margin-bottom: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    }
+    .portfolio-card img {
+      width: 65px;
+      height: 65px;
+      margin-bottom: 10px;
+      border-radius: 50%;
+    }
+    .book-title, .portfolio-title {
+      font-size: 1.06em;
+      font-weight: 500;
+      color: #4173b2;
+      margin-bottom: 2px;
+    }
+    .book-desc, .portfolio-desc {
+      font-size: 0.95em;
+      color: #495a6d;
+      min-height: 32px;
+      margin-bottom: 8px;
+    }
+    .portfolio-link {
+      text-decoration: none;
+      color: #fff;
+      background: #4173b2;
+      padding: 6px 16px;
+      border-radius: 14px;
+      font-size: 0.97em;
+      font-weight: 500;
+      transition: background 0.16s;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      display: inline-block;
+    }
+    .portfolio-link:hover {
+      background: #183863;
     }
     .links {
       margin-top: 30px;
       display: flex;
-      gap: 24px;
+      gap: 26px;
       flex-wrap: wrap;
+      justify-content: center;
     }
     .links a {
-      color: #285eb6;
+      color: #4173b2;
       font-weight: 600;
       text-decoration: none;
       border-bottom: 2px solid #b4cffb;
-      transition: border-color 0.15s;
+      transition: border-color 0.13s;
+      font-size: 1.09em;
     }
     .links a:hover {
-      border-bottom: 2px solid #285eb6;
+      border-bottom: 2px solid #4173b2;
     }
-    @media (max-width: 600px) {
-      .container { padding: 15px; }
-      .flexbox { flex-direction: column; }
-      .profile-photo { margin-left: 0; margin-top: 18px; text-align: left; }
-      .bookshelf { grid-template-columns: repeat(2, 1fr);}
+    @media (max-width: 700px) {
+      .container { padding: 13px; }
+      .bookshelf, .portfolio-grid { grid-template-columns: 1fr 1fr;}
+      .profile-pic { width: 85px; height: 85px; margin-top: -62px;}
+    }
+    @media (max-width: 480px) {
+      .bookshelf, .portfolio-grid { grid-template-columns: 1fr;}
+      .header { padding: 35px 0 20px 0;}
+      .container { margin-top: -25px;}
+      .profile-pic { width: 70px; height: 70px; margin-top: -42px;}
+      .name { font-size: 2rem;}
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="flexbox">
-      <div class="profile-info">
-        <h1>Holger Speckter</h1>
-        <div class="subtitle">
-          Six Sigma Black Belt · AI & Data Science Expert · Author
-        </div>
-        <p>
-          I help businesses thrive at the intersection of process excellence, analytics, and technology.<br>
-          Certified Lean Six Sigma Black Belt and AI Professional with 18+ years experience in finance, recruitment, and gaming industries.<br>
-          Author of technical and philosophical books on Python, AI, and digital transformation.
-        </p>
-        <div class="badges">
-          <span class="badge">Lean Six Sigma Black Belt</span>
-          <span class="badge">Lean Six Sigma Yellow Belt</span>
-          <span class="badge">AI Engineering Professional</span>
-          <span class="badge">Python · R · SQL · Tableau</span>
-          <span class="badge">Machine Learning</span>
-        </div>
-      </div>
-      <div class="profile-photo">
-        <!-- Optional: Add your photo here, or remove this div if you prefer no photo -->
-        <!-- <img src="images/your-photo.jpg" alt="Holger Speckter"> -->
-      </div>
+  <div class="header">
+    <!-- Replace with your actual photo, or use a nice avatar -->
+    <img class="profile-pic" src="images/holger.jpg" alt="Holger Speckter">
+    <div class="name">Holger Speckter</div>
+    <div class="headline">Six Sigma Black Belt · AI & Data Science Expert · Author</div>
+    <div class="badges">
+      <span class="badge">Lean Six Sigma Black Belt</span>
+      <span class="badge">Lean Six Sigma Yellow Belt</span>
+      <span class="badge">AI Engineering Professional</span>
+      <span class="badge">Python · R · SQL · Tableau</span>
+      <span class="badge">Machine Learning</span>
     </div>
-    
+  </div>
+  <div class="container">
+    <div class="about">
+      I help businesses thrive at the intersection of process excellence, analytics, and technology.<br>
+      Certified Lean Six Sigma Black Belt and AI Professional with 18+ years experience in finance, recruitment, and gaming industries.<br>
+      Author of technical and philosophical books on Python, AI, and digital transformation.
+    </div>
     <div class="section-title">Expertise</div>
     <ul>
       <li><b>Process Improvement:</b> Led multiple Six Sigma Black Belt projects, driving measurable gains in efficiency and quality.</li>
@@ -169,7 +212,27 @@
       <li><b>Technical Author:</b> Wrote bestsellers on Python, AI, cryptocurrency, and the philosophy of technology.</li>
       <li><b>Business Intelligence:</b> Developed onboarding systems, automation tools, and market insights.</li>
     </ul>
-    
+    <div class="section-title">Portfolio</div>
+    <div class="portfolio-grid">
+      <div class="portfolio-card">
+        <img src="images/portfolio-python-dashboard.png" alt="Python Data Dashboard">
+        <div class="portfolio-title">Python Data Dashboard</div>
+        <div class="portfolio-desc">Interactive dashboard for real-time data visualization in Python (Dash/Plotly).</div>
+        <a class="portfolio-link" href="https://github.com/holgerspeckter/python-dashboard" target="_blank">View on GitHub</a>
+      </div>
+      <div class="portfolio-card">
+        <img src="images/portfolio-ml-pipeline.png" alt="ML Pipeline">
+        <div class="portfolio-title">AI Model Automation Pipeline</div>
+        <div class="portfolio-desc">End-to-end ML pipeline automating data prep, training, and deployment.</div>
+        <a class="portfolio-link" href="https://github.com/holgerspeckter/ml-pipeline" target="_blank">View on GitHub</a>
+      </div>
+      <div class="portfolio-card">
+        <img src="images/portfolio-nlp.png" alt="NLP Chatbot">
+        <div class="portfolio-title">NLP Chatbot</div>
+        <div class="portfolio-desc">Conversational AI assistant built with Python and spaCy for natural language processing.</div>
+        <a class="portfolio-link" href="https://github.com/holgerspeckter/nlp-chatbot" target="_blank">View on GitHub</a>
+      </div>
+    </div>
     <div class="section-title">Books</div>
     <div class="bookshelf">
       <div class="book">
@@ -200,16 +263,13 @@
         <div class="book-title">Quantum Worlds, Human Minds</div>
         <div class="book-desc">A philosophical exploration of quantum computing and consciousness.</div>
       </div>
-      <!-- Add more books as needed -->
     </div>
-    
     <div class="section-title">Certifications & Awards</div>
     <ul>
       <li>Lean Six Sigma Black Belt & Yellow Belt</li>
       <li>IBM AI Engineering Professional Certificate</li>
       <li>PayPal Spot Award, Game Changer Award</li>
     </ul>
-    
     <div class="section-title">Links & Contact</div>
     <div class="links">
       <a href="mailto:holger@speckter.net">Email</a>
